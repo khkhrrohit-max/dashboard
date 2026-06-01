@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFORMATION</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+        
+        <div class="form-container">
+    <div id="formLayer">
+        <h1>ANY QUERY</h1>
+        <form id="queryForm">
+            <p>ENTER NAME</p>
+            <input type="text" id="userName" name="from_name" placeholder="Your Name" required>
+
+           
+   <input type="hidden" name="to_email" value="khkhrrohit@gmail.com">
+            <p>ENTER YOUR QUESTION</p>
+            <textarea id="userQuestion" name="message_question" placeholder="Type your question here..." rows="3" required></textarea>
+
+            <p>ANY OTHER THINGS</p>
+            <input type="text" id="userOther" name="message_other" placeholder="Other details">
+
+            <p>YOUR FEEDBACK</p>
+            <textarea id="userFeedback" name="message_feedback" placeholder="Your feedback matters to us..." rows="3" required></textarea>
+
+            <button type="submit" class="btn-send" id="submitBtn">
+                <span>SEND</span> <i class="fas fa-paper-plane"></i>
+            </button>
+            
+        </form>
+    </div>
+
+    <div id="thanksLayer" style="display: none; text-align: center; padding: 20px 0;">
+        <i class="fas fa-check-circle" style="font-size: 4rem; color: #38bdf8; margin-bottom: 20px;"></i>
+        <h1 style="margin-bottom: 10px;">THANK YOU!</h1>
+        <p style="color: #94a3b8; font-size: 1.1rem; line-height: 1.6;">
+            Your query has been successfully transmitted. <br>
+            We appreciate your feedback and will get back to you soon.
+        </p>
+    </div>
+</div>
+    <div class="footer">
+        <p>
+            "We are committed to delivering secure, citizen-centric government services. Share your thoughts to help us enhance accessibility and performance."
+            <br><br>
+            "हम सुरक्षित और नागरिक-केंद्रित सरकारी सेवाएँ प्रदान करने के लिए प्रतिबद्ध हैं। पहुँच और प्रदर्शन को बेहतर बनाने में हमारी मदद करने के लिए अपने विचार साझा करें।"
+        </p>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="form.js"></script>
+</body>
+</html>

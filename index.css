@@ -203,48 +203,107 @@ h1 {
         text-align: center;
     }
 }
+/* Website Section */
 .website {
-    width: 90%;
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 25px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-radius: 25px;
+    padding: 30px;
+    margin-bottom: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Website Heading */
 .website h2 {
     text-align: center;
+    color: #38bdf8;
     margin-bottom: 25px;
-    color: #222;
+    font-size: 1.8rem;
 }
 
+/* Website Name */
 .website h4 {
-    color: #333;
+    color: #f8fafc;
     margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
 }
 
+/* Website Description */
 .website p {
-    color: #555;
-    line-height: 1.6;
-    font-size: 15px;
+    color: #cbd5e1;
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 20px;
 }
 
-/* Button */
+/* Website Button */
 .website button {
     margin-left: 10px;
-    padding: 7px 15px;
-    border: none;
-    border-radius: 5px;
-    background: #007bff;
+    padding: 7px 16px;
+
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    border-radius: 10px;
+
+    background: rgba(56, 189, 248, 0.1);
+
+    transition: all 0.3s ease;
 }
 
+/* Button Link */
 .website button a {
-    color: white;
+    color: #38bdf8;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
+/* Button Hover */
 .website button:hover {
-    background: #0056b3;
+    background: #38bdf8;
+    border-color: #38bdf8;
+    transform: translateY(-2px);
+}
+
+.website button:hover a {
+    color: #020617;
+}
+
+/* Website Card Hover */
+.website:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-color: rgba(56, 189, 248, 0.3);
+}
+
+/* Mobile */
+@media(max-width: 768px) {
+
+    .website {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .website h2 {
+        font-size: 1.5rem;
+    }
+
+    .website h4 {
+        font-size: 1rem;
+    }
+
+    .website p {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
+    .website button {
+        margin-left: 5px;
+        padding: 6px 12px;
+    }
 }

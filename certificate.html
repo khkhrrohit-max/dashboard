@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Achievements</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="certificate.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-inner">
+
+            <div class="logo-area">
+                <div class="logo">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+
+                <div>
+                    <h2>Achievements</h2>
+                    <p>My Professional Journey</p>
+                </div>
+            </div>
+
+            <button class="back-btn" id="backBtn">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-inner">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    <i class="fa-solid fa-star"></i>
+                    MY ACHIEVEMENTS
+                </span>
+
+                <h1>
+                    Skills. Experience.
+                    <span>Achievements.</span>
+                </h1>
+
+                <p>
+                    Explore my certificates, badges, internship offers
+                    and professional achievements collected over time.
+                </p>
+
+                <button class="view-btn" id="scrollCollection">
+                    <i class="fa-solid fa-folder-open"></i>
+                    View Collection
+                </button>
+
+            </div>
+
+
+            <!-- STATS -->
+            <div class="stats">
+
+                <div class="stat">
+                    <div class="stat-icon purple">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+
+                    <div>
+                        <strong id="certificateCount">0</strong>
+                        <span>Certificates</span>
+                    </div>
+                </div>
+
+
+                <div class="stat">
+                    <div class="stat-icon yellow">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+
+                    <div>
+                        <strong id="badgeCount">0</strong>
+                        <span>Badges</span>
+                    </div>
+                </div>
+
+
+                <div class="stat">
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-file-signature"></i>
+                    </div>
+
+                    <div>
+                        <strong id="offerCount">0</strong>
+                        <span>Offers</span>
+                    </div>
+                </div>
+
+
+                <div class="stat">
+                    <div class="stat-icon green">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+                    <div>
+                        <strong id="internshipCount">0</strong>
+                        <span>Internships</span>
+                    </div>
+                </div>
+
+
+                <div class="stat total">
+                    <div class="stat-icon cyan">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <div>
+                        <strong id="totalCount">0</strong>
+                        <span>Total Achievements</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COLLECTION -->
+    <main class="collection" id="collection">
+
+        <div class="heading">
+
+            <span>
+                <i class="fa-solid fa-layer-group"></i>
+                MY COLLECTION
+            </span>
+
+            <h2>Certificates & Achievements</h2>
+
+            <p>
+                Search and filter through all your achievements.
+            </p>
+
+        </div>
+
+
+        <!-- FILTER TOOLBAR -->
+        <div class="toolbar">
+
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search achievement, organization..."
+                >
+
+                <button id="clearSearch">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+
+            <select id="yearFilter">
+                <option value="all">All Years</option>
+            </select>
+
+
+            <select id="sortFilter">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+                <option value="az">A - Z</option>
+                <option value="za">Z - A</option>
+            </select>
+
+        </div>
+
+
+        <!-- CATEGORY -->
+        <div class="tabs">
+
+            <button
+                class="category-tab active"
+                data-filter="all"
+            >
+                <i class="fa-solid fa-border-all"></i>
+                All
+            </button>
+
+
+            <button
+                class="category-tab"
+                data-filter="certificate"
+            >
+                <i class="fa-solid fa-certificate"></i>
+                Certificates
+            </button>
+
+
+            <button
+                class="category-tab"
+                data-filter="badge"
+            >
+                <i class="fa-solid fa-award"></i>
+                Badges
+            </button>
+
+
+            <button
+                class="category-tab"
+                data-filter="offer"
+            >
+                <i class="fa-solid fa-file-signature"></i>
+                Offers
+            </button>
+
+
+            <button
+                class="category-tab"
+                data-filter="internship"
+            >
+                <i class="fa-solid fa-briefcase"></i>
+                Internships
+            </button>
+
+        </div>
+
+
+        <!-- CARDS -->
+        <div
+            id="achievementGrid"
+            class="achievement-grid"
+        ></div>
+
+
+        <!-- EMPTY -->
+        <div id="emptyState" class="empty-state">
+
+            <div class="empty-icon">
+                <i class="fa-solid fa-folder-open"></i>
+            </div>
+
+            <h3>No Achievement Found</h3>
+
+            <p>
+                Try changing your search or filter.
+            </p>
+
+            <button id="resetFilters">
+                <i class="fa-solid fa-rotate-left"></i>
+                Reset Filters
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- PREVIEW -->
+    <div id="previewOverlay" class="preview-overlay">
+
+        <div class="preview-modal">
+
+            <button
+                id="modalClose"
+                class="modal-close"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+
+            <div class="preview-image">
+                <img
+                    id="previewImage"
+                    src=""
+                    alt="Achievement"
+                >
+            </div>
+
+
+            <div class="preview-details">
+
+                <span id="previewType" class="preview-type">
+                    Certificate
+                </span>
+
+                <h2 id="previewTitle">
+                    Achievement
+                </h2>
+
+                <p id="previewName" class="preview-name">
+                    Name
+                </p>
+
+
+                <div class="company">
+                    <i class="fa-solid fa-building"></i>
+                    <span id="previewCompany">
+                        Organization
+                    </span>
+                </div>
+
+
+                <div class="details">
+
+                    <div class="detail">
+                        <i class="fa-regular fa-calendar"></i>
+
+                        <div>
+                            <small>Date</small>
+                            <strong id="previewDate">-</strong>
+                        </div>
+                    </div>
+
+
+                    <div class="detail">
+                        <i class="fa-regular fa-clock"></i>
+
+                        <div>
+                            <small>Duration</small>
+                            <strong id="previewDuration">-</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="downloadBtn"
+                    class="download-btn"
+                >
+                    <i class="fa-solid fa-download"></i>
+                    Download
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-inner">
+
+            <div>
+                <strong>My Achievements</strong>
+                <p>Building skills, gaining experience.</p>
+            </div>
+
+            <span>
+                © 2026 All Rights Reserved
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="certificate.js"></script>
+
+</body>
+</html>

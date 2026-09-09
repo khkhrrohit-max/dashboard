@@ -204,6 +204,7 @@ h1 {
     }
 }
 /* Website Section */
+/* Website Section */
 .website {
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(15px);
@@ -303,6 +304,10 @@ h1 {
     }
 
     .website button {
+        margin-left: 5px;
+        padding: 6px 12px;
+    }
+}
         margin-left: 5px;
         padding: 6px 12px;
     }

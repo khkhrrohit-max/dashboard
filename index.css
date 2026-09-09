@@ -203,3 +203,48 @@ h1 {
         text-align: center;
     }
 }
+.website {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.website h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.website h4 {
+    color: #333;
+    margin-top: 20px;
+}
+
+.website p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* Button */
+.website button {
+    margin-left: 10px;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+}
+
+.website button a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.website button:hover {
+    background: #0056b3;
+}
